@@ -1,0 +1,141 @@
+/* Dark Theme Button Styles */
+
+/* buttons with gradients */
+.control-button {
+    -fx-background-color: linear-gradient(to bottom, #5ab0ff, #4a9eff);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 18px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+    -fx-pref-width: 90px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1px;
+}
+
+.control-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #6ac0ff, #5aafff);
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 8, 0, 0, 1);
+}
+
+.control-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #4a9eff, #3a8eef);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.control-button:disabled {
+    -fx-background-color: linear-gradient(to bottom, #777777, #666666);
+    -fx-text-fill: #aaaaaa;
+    -fx-cursor: default;
+    -fx-effect: none;
+}
+
+/* File button with gradient */
+.open-file-button {
+    -fx-background-color: linear-gradient(to bottom, #5dcf65, #4caf50);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+    -fx-pref-width: 120px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1px;
+}
+
+.open-file-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #6edf76, #5cbf60);
+    -fx-effect: dropshadow(gaussian, rgba(76,175,80,0.3), 8, 0, 0, 1);
+}
+
+.open-file-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #4caf50, #409444);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Toggle button with some interesting border effect */
+.side-panel-toggle-button {
+    -fx-background-color: rgba(35, 39, 42, 0.8);
+    -fx-border-color: #4a9eff;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #4a9eff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 16px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
+}
+
+.side-panel-toggle-button:hover {
+    -fx-background-color: rgba(38, 52, 69, 0.9);
+    -fx-text-fill: #6ac0ff;
+    -fx-border-color: #6ac0ff;
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 8, 0, 0, 1);
+}
+
+.side-panel-toggle-button:pressed {
+    -fx-background-color: rgba(26, 39, 58, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Theme toggle button with glow */
+.theme-toggle-button {
+    -fx-background-color: rgba(35, 39, 42, 0.5);
+    -fx-border-color: #4a9eff;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #4a9eff;
+    -fx-font-size: 19px;
+    -fx-font-family: "Segoe UI", "Segoe UI Emoji", "Arial Unicode MS", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 5, 0, 0, 0);
+}
+
+.theme-toggle-button:hover {
+    -fx-background-color: rgba(38, 52, 69, 0.7);
+    -fx-text-fill: #6ac0ff;
+    -fx-border-color: #6ac0ff;
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.5), 10, 0, 0, 0);
+}
+
+.theme-toggle-button:pressed {
+    -fx-background-color: rgba(26, 39, 58, 0.7);
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 4, 0, 0, 0);
+}
+
+/* The delete button styling */
+.delete-button {
+    -fx-background-color: rgba(255, 80, 80, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 2px 6px;
+    -fx-background-radius: 12px;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.delete-button:hover {
+    -fx-background-color: rgba(255, 60, 60, 1);
+    -fx-effect: dropshadow(gaussian, rgba(255,80,80,0.3), 6, 0, 0, 0);
+}
+
+.delete-button:pressed {
+    -fx-background-color: rgba(220, 50, 50, 1);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 0);
+}

@@ -1,0 +1,75 @@
+/* Light Theme Slider Styles */
+
+/* progress slider */
+.progress-slider {
+    -fx-pref-width: 220px;
+    -fx-background-radius: 8px;
+}
+
+.progress-slider .track {
+    -fx-background-color: rgba(200, 200, 200, 0.7);
+    -fx-background-radius: 4px;
+    -fx-pref-height: 6px;
+}
+
+.progress-slider .thumb {
+    -fx-background-color: linear-gradient(to bottom, #2d82f8, #1a73e8);
+    -fx-background-radius: 10px;
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 0);
+    -fx-border-color: rgba(255, 255, 255, 0.9);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.progress-slider .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #3d92ff, #2a83f8);
+    -fx-effect: dropshadow(gaussian, rgba(26,115,232,0.3), 8, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* Custom volume slider */
+.volume-slider {
+    -fx-pref-width: 80px;
+}
+
+.volume-slider .track {
+    -fx-background-color: rgba(200, 200, 200, 0.7);
+    -fx-background-radius: 4px;
+    -fx-pref-height: 5px;
+}
+
+.volume-slider .thumb {
+    -fx-background-color: linear-gradient(to bottom, #4db556, #45a049);
+    -fx-background-radius: 8px;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 0);
+    -fx-border-color: rgba(255, 255, 255, 0.9);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.volume-slider .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #5dc566, #55b059);
+    -fx-effect: dropshadow(gaussian, rgba(69,160,73,0.3), 7, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.speed-combo {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-text-fill: #1a73e8;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-color: rgba(26, 115, 232, 0.5);
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 4px 8px;
+}
+
+.speed-combo:hover {
+    -fx-background-color: rgba(250, 252, 255, 0.95);
+    -fx-border-color: rgba(26, 115, 232, 0.8);
+}

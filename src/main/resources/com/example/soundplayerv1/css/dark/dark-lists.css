@@ -1,0 +1,29 @@
+/* Dark Theme List Styles */
+
+.sound-list-view {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: rgba(30, 34, 38, 0.7);
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
+.sound-list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cccccc;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.sound-list-view .list-cell:hover {
+    -fx-background-color: rgba(74, 158, 255, 0.15);
+}
+
+.sound-list-view .list-cell:selected {
+    -fx-background-color: linear-gradient(to right, #4a9eff, #3a7fdf);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}

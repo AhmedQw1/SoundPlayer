@@ -1,0 +1,64 @@
+/* Light Theme master Import File */
+
+@import "../base.css";
+@import "../animations.css";
+@import "light-buttons.css";
+@import "light-sliders.css";
+@import "light-lists.css";
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f5f7fa, #ebeef2);
+}
+
+.border-pane {
+    -fx-background-color: transparent;
+}
+
+.center-pane {
+    -fx-background-color: transparent;
+}
+
+.side-panel {
+    -fx-background-color: linear-gradient(to bottom, #e6e9f0, #dce0e8);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.insta-label {
+    -fx-text-fill: #1a73e8;
+    -fx-background-color: rgba(26, 115, 232, 0.08);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0, 0, 1);
+}
+
+.time-label {
+    -fx-text-fill: #333333;
+}
+
+.speed-label {
+    -fx-text-fill: #333333;
+}
+
+.icon-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #45a049;
+    -fx-padding: 0 2px 0 0;
+}
+
+.disk-image {
+    -fx-effect: dropshadow(gaussian, rgba(26,115,232,0.2), 20, 0.3, 0, 0);
+}
+
+.separator {
+    -fx-background-color: rgba(204, 204, 204, 0.5);
+}
+
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: normal;
+}
+
+#fileNameLabel {
+    -fx-text-fill: #111111;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0, 0, 1);
+}

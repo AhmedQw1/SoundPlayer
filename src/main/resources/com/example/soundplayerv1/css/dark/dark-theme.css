@@ -1,0 +1,64 @@
+/* Dark Theme master Import File */
+
+@import "../base.css";
+@import "../animations.css";
+@import "dark-buttons.css";
+@import "dark-sliders.css";
+@import "dark-lists.css";
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #1a1e21, #121518);
+}
+
+.border-pane {
+    -fx-background-color: transparent;
+}
+
+.center-pane {
+    -fx-background-color: transparent;
+}
+
+.side-panel {
+    -fx-background-color: linear-gradient(to bottom, #23272a, #1b1f22);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.insta-label {
+    -fx-text-fill: #4a9eff;
+    -fx-background-color: rgba(74, 158, 255, 0.1);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 1);
+}
+
+.time-label {
+    -fx-text-fill: #cccccc;
+}
+
+.speed-label {
+    -fx-text-fill: #cccccc;
+}
+
+.icon-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #5dcf65;
+    -fx-padding: 0 2px 0 0;
+}
+
+.disk-image {
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 20, 0.3, 0, 0);
+}
+
+.separator {
+    -fx-background-color: rgba(85, 85, 85, 0.5);
+}
+
+.label {
+    -fx-text-fill: #cccccc;
+    -fx-font-weight: normal;
+}
+
+#fileNameLabel {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0, 0, 1);
+}
