@@ -1,4 +1,4 @@
-# 🎵 Sound Player
+#  Sound Player
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AhmedQw1/SoundPlayer)
 ![GitHub top language](https://img.shields.io/github/languages/top/AhmedQw1/SoundPlayer)
@@ -10,11 +10,11 @@ A really cool audio player built with JavaFX that combines nice design with powe
 
 ## ✨ Features
 
-- **🎛️ Intuitive Playback Controls** - Simple responsive controls for your music.
-- **📋 Smart Playlist Management** - Create edit and save your playlists.
-- **🌓 Customizable Themes** - Toggle between light and dark modes.
-- **🔊 Advanced Audio Controls** - Adjust volume and playback speed.
-- **💾 Persistent Settings** - Your preferences are saved between sessions.
+- ** Intuitive Playback Controls** - Simple responsive controls for your music.
+- ** Smart Playlist Management** - Create edit and save your playlists.
+- ** Customizable Themes** - Toggle between light and dark modes.
+- ** Advanced Audio Controls** - Adjust volume and playback speed.
+- ** Persistent Settings** - Your preferences are saved between sessions.
 
 ### Dark Theme
 ![Dark Theme](screenshots/dark-theme.png)
@@ -22,7 +22,7 @@ A really cool audio player built with JavaFX that combines nice design with powe
 ### Light Theme
 ![Light Theme](screenshots/light-theme.png)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Java 21 or higher
