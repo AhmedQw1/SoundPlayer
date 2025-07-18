@@ -8,13 +8,13 @@ A really cool audio player built with JavaFX that combines nice design with powe
 
 ![Main Interface](screenshots/main-screen.png)
 
-## ✨ Features
+##  Features
 
-- ** Intuitive Playback Controls** - Simple responsive controls for your music.
-- ** Smart Playlist Management** - Create edit and save your playlists.
-- ** Customizable Themes** - Toggle between light and dark modes.
-- ** Advanced Audio Controls** - Adjust volume and playback speed.
-- ** Persistent Settings** - Your preferences are saved between sessions.
+- **Intuitive Playback Controls** - Simple responsive controls for your music.
+- **Smart Playlist Management** - Create edit and save your playlists.
+- **Customizable Themes** - Toggle between light and dark modes.
+- **Advanced Audio Controls** - Adjust volume and playback speed.
+- **Persistent Settings** - Your preferences are saved between sessions.
 
 ### Dark Theme
 ![Dark Theme](screenshots/dark-theme.png)
