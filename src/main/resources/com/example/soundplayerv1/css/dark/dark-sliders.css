@@ -1,75 +1,141 @@
-/* Dark Theme Slider Styles */
+/* Dark Theme Modern Slider Styles - Minimal Design */
 
-/* progress slider */
+/* Progress Slider */
 .progress-slider {
-    -fx-pref-width: 220px;
-    -fx-background-radius: 8px;
+    -fx-pref-width: 240px;
+    -fx-background-radius: 12px;
+    -fx-padding: 8px 0;
 }
-
 .progress-slider .track {
-    -fx-background-color: rgba(68, 68, 68, 0.7);
-    -fx-background-radius: 4px;
-    -fx-pref-height: 6px;
+    -fx-background-color: rgba(60, 60, 60, 0.6);
+    -fx-background-radius: 1px;
+    -fx-pref-height: 2px;
+    -fx-effect: none;
+    -fx-border-color: transparent;
+}
+.progress-slider .colored-track {
+    -fx-background-color: #4a9eff;
+    -fx-background-radius: 1px;
+}
+.progress-slider .thumb {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 16px;
+    -fx-pref-height: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 1);
+}
+.progress-slider .thumb:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.4, 0, 2);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.progress-slider .thumb:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0.5, 0, 1);
 }
 
-.progress-slider .thumb {
-    -fx-background-color: linear-gradient(to bottom, #5ab0ff, #4a9eff);
+/* Volume Slider */
+.volume-slider {
+    -fx-pref-width: 100px;
     -fx-background-radius: 10px;
+    -fx-padding: 6px 0;
+}
+.volume-slider .track {
+    -fx-background-color: rgba(60, 60, 60, 0.6);
+    -fx-background-radius: 1px;
+    -fx-pref-height: 2px;
+}
+.volume-slider .colored-track {
+    -fx-background-color: #5dcf65;
+    -fx-background-radius: 1px;
+}
+.volume-slider .thumb {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 7px;
     -fx-pref-width: 14px;
     -fx-pref-height: 14px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 0);
-    -fx-border-color: rgba(255, 255, 255, 0.8);
-    -fx-border-width: 1px;
-    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+}
+.volume-slider .thumb:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.4, 0, 1);
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+}
+.volume-slider .thumb:pressed {
+    -fx-scale-x: 0.85;
+    -fx-scale-y: 0.85;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 2, 0.5, 0, 1);
 }
 
-.progress-slider .thumb:hover {
-    -fx-background-color: linear-gradient(to bottom, #6ac0ff, #5aafff);
-    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.4), 8, 0, 0, 0);
-    -fx-cursor: hand;
-}
-
-/* Custom volume slider */
-.volume-slider {
+/* Speed Combo (JFXComboBox) */
+.speed-combo {
+    -fx-background-color: linear-gradient(to bottom, rgba(35,39,42,0.9), rgba(42,46,49,0.8));
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-border-color: rgba(30,136,229,0.6);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+    -fx-alignment: CENTER;
+    -fx-min-width: 80px;
     -fx-pref-width: 80px;
 }
-
-.volume-slider .track {
-    -fx-background-color: rgba(68, 68, 68, 0.7);
-    -fx-background-radius: 4px;
-    -fx-pref-height: 5px;
-}
-
-.volume-slider .thumb {
-    -fx-background-color: linear-gradient(to bottom, #5dcf65, #4caf50);
-    -fx-background-radius: 8px;
-    -fx-pref-width: 12px;
-    -fx-pref-height: 12px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 0);
-    -fx-border-color: rgba(255, 255, 255, 0.7);
-    -fx-border-width: 1px;
-    -fx-border-radius: 8px;
-}
-
-.volume-slider .thumb:hover {
-    -fx-background-color: linear-gradient(to bottom, #6edf76, #5cbf60);
-    -fx-effect: dropshadow(gaussian, rgba(76,175,80,0.4), 7, 0, 0, 0);
-    -fx-cursor: hand;
-}
-
-.speed-combo {
-    -fx-background-color: rgba(35, 39, 42, 0.8);
-    -fx-text-fill: #4a9eff;
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-    -fx-border-color: rgba(74, 158, 255, 0.5);
-    -fx-border-width: 1px;
-    -fx-border-radius: 4px;
-    -fx-background-radius: 4px;
-    -fx-padding: 4px 8px;
-}
-
 .speed-combo:hover {
-    -fx-background-color: rgba(45, 49, 52, 0.9);
-    -fx-border-color: rgba(74, 158, 255, 0.8);
+    -fx-background-color: linear-gradient(to bottom, rgba(45,49,52,0.95), rgba(52,56,59,0.9));
+    -fx-border-color: rgba(30,136,229,0.9);
+}
+.speed-combo:focused {
+    -fx-border-color: #1e88e5;
+    -fx-effect: dropshadow(gaussian, rgba(30,136,229,0.4), 8, 0.5, 0, 2);
+}
+
+/* Remove extra arrow area padding so text has space */
+.speed-combo > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 4 0 4;
+}
+.speed-combo > .arrow-button > .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* Selected value cell */
+.speed-combo .list-cell {
+    -fx-text-fill: #ffffff;
+    -fx-alignment: CENTER;
+    -fx-text-overrun: CLIP;
+    -fx-padding: 0;
+}
+
+/* Popup list */
+.speed-combo .combo-box-popup .list-view {
+    -fx-background-color: rgba(35,39,42,0.95);
+    -fx-border-color: rgba(30,136,229,0.6);
+    -fx-border-width: 1px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+.speed-combo .combo-box-popup .list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 6px 8px;
+    -fx-alignment: CENTER;
+    -fx-text-overrun: CLIP;
+}
+.speed-combo .combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(74,158,255,0.25);
+}
+.speed-combo .combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: rgba(74,158,255,0.45);
+    -fx-text-fill: #ffffff;
+}
+
+/* Smooth transitions */
+.progress-slider .thumb, .volume-slider .thumb {
+    -fx-transition: -fx-scale-x 0.15s ease-out,
+    -fx-scale-y 0.15s ease-out,
+    -fx-effect 0.2s ease-out;
 }
