@@ -139,3 +139,52 @@
     -fx-background-color: rgba(220, 50, 50, 1);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 0);
 }
+
+/* Transparent play/pause button */
+.play-pause-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.play-pause-button:hover {
+    -fx-background-color: rgba(74, 158, 255, 0.1);
+    -fx-background-radius: 4px;
+}
+
+.play-pause-button:pressed {
+    -fx-background-color: rgba(74, 158, 255, 0.2);
+}
+
+/* Transparent reset button */
+.reset-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.reset-button:hover {
+    -fx-background-color: rgba(93, 207, 101, 0.1);
+    -fx-background-radius: 4px;
+}
+
+.reset-button:pressed {
+    -fx-background-color: rgba(93, 207, 101, 0.2);
+}
+
+/* Volume icon (Ikonli FontIcon) */
+.volume-icon {
+    -fx-icon-color: #ffffff;
+    -fx-fill: #ffffff;          /* Fallback if icon-color not applied */
+    -fx-opacity: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 2, 0, 0, 1);
+}
+
+.volume-icon:hover {
+    -fx-icon-color: #e6f3ff;
+    -fx-fill: #e6f3ff;
+}

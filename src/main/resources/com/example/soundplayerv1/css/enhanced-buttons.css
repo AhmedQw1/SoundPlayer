@@ -1,0 +1,103 @@
+/* Enhanced video control buttons */
+.play-pause-button {
+    -fx-background-color: rgba(74, 158, 255, 0.1);
+    -fx-border-color: rgba(74, 158, 255, 0.3);
+    -fx-border-width: 2px;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.3), 8, 0, 0, 0);
+}
+
+.play-pause-button:hover {
+    -fx-background-color: rgba(74, 158, 255, 0.2);
+    -fx-border-color: rgba(74, 158, 255, 0.6);
+    -fx-effect: dropshadow(gaussian, rgba(74,158,255,0.5), 12, 0, 0, 0);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.play-pause-button:pressed {
+    -fx-background-color: rgba(74, 158, 255, 0.4);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Navigation buttons (Previous/Next) */
+.nav-button {
+    -fx-background-color: rgba(135, 206, 250, 0.1);
+    -fx-border-color: rgba(135, 206, 250, 0.4);
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(135,206,250,0.3), 6, 0, 0, 0);
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(135, 206, 250, 0.2);
+    -fx-border-color: rgba(135, 206, 250, 0.7);
+    -fx-effect: dropshadow(gaussian, rgba(135,206,250,0.5), 10, 0, 0, 0);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.nav-button:pressed {
+    -fx-background-color: rgba(135, 206, 250, 0.3);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Enhanced reset button with different color */
+.reset-button {
+    -fx-background-color: rgba(93, 207, 101, 0.1);
+    -fx-border-color: rgba(93, 207, 101, 0.3);
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(93,207,101,0.3), 6, 0, 0, 0);
+}
+
+.reset-button:hover {
+    -fx-background-color: rgba(93, 207, 101, 0.2);
+    -fx-border-color: rgba(93, 207, 101, 0.6);
+    -fx-effect: dropshadow(gaussian, rgba(93,207,101,0.5), 10, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Enhanced open file button */
+.open-file-button {
+    -fx-background-color: linear-gradient(to bottom, #5dcf65, #4caf50);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-pref-width: 130px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 2);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+}
+
+.open-file-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #6edf76, #5cbf60);
+    -fx-effect: dropshadow(gaussian, rgba(76,175,80,0.4), 10, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.open-file-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #4caf50, #409444);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}

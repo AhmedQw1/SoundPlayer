@@ -1,0 +1,22 @@
+/* Video Player Styles */
+.media-view {
+    -fx-background-color: #000000;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+.media-container {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+}
+
+/* Update disk image for when audio is playing */
+.disk-image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 2);
+}
+
+/* Media type indicators in playlist */
+.media-type-icon {
+    -fx-font-size: 12px;
+    -fx-padding: 2px;
+}

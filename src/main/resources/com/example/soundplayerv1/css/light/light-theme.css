@@ -1,7 +1,9 @@
 /* Light Theme master Import File */
-
 @import "../base.css";
 @import "../animations.css";
+@import "../video-style.css";
+@import "../enhanced-progress.css";
+@import "../enhanced-buttons.css";
 @import "light-buttons.css";
 @import "light-sliders.css";
 @import "light-lists.css";
@@ -46,7 +48,7 @@
 }
 
 .disk-image {
-    -fx-effect: dropshadow(gaussian, rgba(26,115,232,0.2), 20, 0.3, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgba(26,115,232,0.4), 20, 0.5, 0, 0);
 }
 
 .separator {
@@ -61,4 +63,69 @@
 #fileNameLabel {
     -fx-text-fill: #111111;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0, 0, 1);
+}
+
+/* Enhanced media container for light theme */
+.media-container {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(26, 115, 232, 0.3);
+}
+
+/* Light theme specific enhancements */
+.enhanced-filename {
+    -fx-text-fill: #111111 !important;
+}
+
+.media-type-label {
+    -fx-text-fill: #1a73e8 !important;
+}
+
+/* KILL THE JFOENIX ANIMATED THUMB COMPLETELY */
+.jfx-slider .animated-thumb {
+    -fx-opacity: 0 !important;
+    -fx-scale-x: 0 !important;
+    -fx-scale-y: 0 !important;
+    -fx-max-width: 0 !important;
+    -fx-max-height: 0 !important;
+    -fx-pref-width: 0 !important;
+    -fx-pref-height: 0 !important;
+    visibility: hidden !important;
+}
+
+.jfx-slider .animated-thumb .slider-value {
+    -fx-opacity: 0 !important;
+    -fx-text-fill: transparent !important;
+}
+
+/* NUCLEAR OPTION - COMPLETELY DESTROY ALL JFOENIX TOOLTIPS */
+.jfx-slider .animated-thumb {
+    -fx-tooltip: null !important;
+}
+
+.jfx-slider .tooltip,
+.jfx-slider > .tooltip,
+.jfx-slider .animated-thumb .tooltip,
+.jfx-slider .track .tooltip,
+.jfx-slider .thumb .tooltip {
+    -fx-opacity: 0 !important;
+    -fx-visibility: hidden !important;
+    -fx-max-width: 0 !important;
+    -fx-max-height: 0 !important;
+    -fx-pref-width: 0 !important;
+    -fx-pref-height: 0 !important;
+    -fx-background-color: transparent !important;
+    -fx-text-fill: transparent !important;
+    -fx-background-radius: 0 !important;
+    -fx-border-radius: 0 !important;
+    -fx-padding: 0 !important;
+    -fx-border-width: 0 !important;
+    display: none !important;
+}
+
+/* Hide any green tooltips specifically */
+.tooltip[style*="green"],
+.tooltip[style*="#45"],
+.tooltip[style*="rgb(69"] {
+    display: none !important;
+    -fx-opacity: 0 !important;
 }

@@ -139,3 +139,51 @@
     -fx-background-color: rgba(220, 50, 50, 1);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 0);
 }
+
+/* Transparent play/pause button */
+.play-pause-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.play-pause-button:hover {
+    -fx-background-color: rgba(26, 115, 232, 0.08);
+    -fx-background-radius: 4px;
+}
+
+.play-pause-button:pressed {
+    -fx-background-color: rgba(26, 115, 232, 0.15);
+}
+
+/* Transparent reset button */
+.reset-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.reset-button:hover {
+    -fx-background-color: rgba(69, 160, 73, 0.08);
+    -fx-background-radius: 4px;
+}
+
+.reset-button:pressed {
+    -fx-background-color: rgba(69, 160, 73, 0.15);
+}
+
+/* Volume icon (Ikonli FontIcon) */
+.volume-icon {
+    -fx-icon-color: #1976d2;
+    -fx-fill: #1976d2;
+    -fx-opacity: 0.95;
+}
+
+.volume-icon:hover {
+    -fx-icon-color: #0d57b5;
+    -fx-fill: #0d57b5;
+}

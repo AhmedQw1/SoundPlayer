@@ -1,60 +1,54 @@
 package Controller;
 
+import com.jfoenix.controls.JFXSlider;
+import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.Slider;
+import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.application.Platform;
+import javafx.scene.control.OverrunStyle;
 
 public class UIController {
-    private SoundPlayerController mainController;
+    private final SoundPlayerController mainController;
 
     public UIController(SoundPlayerController mainController) {
         this.mainController = mainController;
     }
 
     public void initializeUI() {
-        // Sets up UI components
-        Slider progressSlider = mainController.getProgressSlider();
-        Slider volumeSlider = mainController.getVolumeSlider();
-        ComboBox<String> speedComboBox = mainController.getSpeedComboBox();
-        ListView<String> soundListView = mainController.getSoundListView(); // FIXED: Changed VBox to ListView<String>
+        JFXSlider progressSlider = mainController.getProgressSlider();
+        JFXSlider volumeSlider = mainController.getVolumeSlider();
+        JFXComboBox<String> speedComboBox = mainController.getSpeedComboBox();
+        ListView<String> soundListView = mainController.getSoundListView();
         Label currentTimeLabel = mainController.getCurrentTimeLabel();
         Label totalTimeLabel = mainController.getTotalTimeLabel();
 
-        // Apply styles
-        mainController.getSoundListView().getStyleClass().add("sound-list-view");
+        // Style classes
+        soundListView.getStyleClass().add("sound-list-view");
         mainController.getFileNameLabel().getStyleClass().add("file-name-label");
         progressSlider.getStyleClass().add("progress-slider");
         mainController.getSidePanelToggleButton().getStyleClass().add("side-panel-toggle-button");
-        VBox.setVgrow(mainController.getSoundListView(), Priority.ALWAYS);
+        VBox.setVgrow(soundListView, Priority.ALWAYS);
 
-        // Initialize values
+        // Initial labels
         progressSlider.setValue(0);
         currentTimeLabel.setText("0:00");
         totalTimeLabel.setText("0:00");
 
-        // Sets up volume slider
+        // Volume slider (0-100 visible; mapped to 0.0–1.0 elsewhere)
         volumeSlider.setMin(0);
-        volumeSlider.setMax(1);
-        volumeSlider.setValue(0.8);
+        volumeSlider.setMax(100);
+        volumeSlider.setValue(80);
         volumeSlider.getStyleClass().add("volume-slider");
-        volumeSlider.valueProperty().addListener((obs, oldVal, newVal) -> {
-            if (mainController.getMediaController().getMediaPlayer() != null) {
-                mainController.getMediaController().getMediaPlayer().setVolume(newVal.doubleValue());
-            }
-        });
 
-        // Sets up speed combo box
-        speedComboBox.setItems(FXCollections.observableArrayList("0.5x", "1x", "1.5x", "2x"));
-        speedComboBox.setValue("1x");
-        speedComboBox.getStyleClass().add("speed-combo");
-        speedComboBox.setOnAction(e -> mainController.getMediaController().updatePlaybackRate());
+        // Speed combo
+        setupJFXSpeedComboBox(speedComboBox);
 
-        // Sets up disk image
+        // Disk image
         Image diskImage = new Image(getClass().getResourceAsStream("/com/example/soundplayerv1/disk.png"));
         mainController.getDiskImageView().setImage(diskImage);
         mainController.getDiskImageView().setPreserveRatio(true);
@@ -62,14 +56,60 @@ public class UIController {
         mainController.getDiskImageView().setFitHeight(120);
         mainController.getDiskImageView().getStyleClass().add("disk-image");
 
-        // Sets up the side panel
+        // Side panel
         mainController.getSidePanel().managedProperty().bind(mainController.getSidePanel().visibleProperty());
         mainController.getSidePanel().setVisible(false);
 
         mainController.getSidePanelToggleButton().setOnAction(e -> {
-            mainController.getSidePanel().setVisible(!mainController.getSidePanel().isVisible());
-            mainController.getSidePanelToggleButton().setText(
-                    mainController.getSidePanel().isVisible() ? "Hide Sounds" : "Show Sounds");
+            boolean vis = !mainController.getSidePanel().isVisible();
+            mainController.getSidePanel().setVisible(vis);
+            mainController.getSidePanelToggleButton().setText(vis ? "Hide Sounds" : "Show Sounds");
+        });
+    }
+
+    private void setupJFXSpeedComboBox(JFXComboBox<String> speedComboBox) {
+        speedComboBox.getItems().setAll("0.5x", "1x", "1.5x", "2x");
+        if (!speedComboBox.getStyleClass().contains("speed-combo")) {
+            speedComboBox.getStyleClass().add("speed-combo");
+        }
+        speedComboBox.setEditable(false);
+        speedComboBox.setVisibleRowCount(4);
+
+        // Button cell (the visible selected value)
+        ListCell<String> buttonCell = new ListCell<>() {
+            @Override protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty || item == null ? null : item);
+                setTextOverrun(OverrunStyle.CLIP);
+                setStyle("-fx-alignment: CENTER;");
+            }
+        };
+        speedComboBox.setButtonCell(buttonCell);
+
+        // Cells in popup list
+        speedComboBox.setCellFactory(listView -> new ListCell<>() {
+            {
+                setTextOverrun(OverrunStyle.CLIP);
+                setStyle("-fx-alignment: CENTER;");
+            }
+            @Override protected void updateItem(String val, boolean empty) {
+                super.updateItem(val, empty);
+                setText(empty || val == null ? null : val);
+            }
+        });
+
+        // Set default after layout to avoid race with skin creation
+        Platform.runLater(() -> {
+            if (speedComboBox.getValue() == null) {
+                speedComboBox.getSelectionModel().select("1x");
+            }
+        });
+
+        speedComboBox.setOnAction(e -> {
+            String selectedValue = speedComboBox.getValue();
+            if (selectedValue != null) {
+                mainController.getMediaController().updatePlaybackRate();
+            }
         });
     }
 }
