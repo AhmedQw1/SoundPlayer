@@ -9,7 +9,6 @@ module com.example.soundplayerv1 {
     requires org.kordamp.ikonli.javafx;       // Ikonli JavaFX binding
     requires org.kordamp.ikonli.fontawesome5; // Ikonli FontAwesome5 pack
     requires org.kordamp.ikonli.materialdesign2; // Ikonli MaterialDesign2 pack
-    requires fr.brouillard.oss.cssfx;         // CSSFX (automatic module name)
 
     opens com.example.soundplayerv1 to javafx.fxml;
     exports com.example.soundplayerv1;
