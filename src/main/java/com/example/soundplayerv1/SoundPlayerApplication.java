@@ -1,7 +1,6 @@
 package com.example.soundplayerv1;
 
 import Controller.ThemeController;
-import fr.brouillard.oss.cssfx.CSSFX;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -24,9 +23,6 @@ public class SoundPlayerApplication extends Application {
                 "/com/example/soundplayerv1/css/light/light-theme.css";
 
         scene.getStylesheets().add(getClass().getResource(themePath).toExternalForm());
-
-        // Initialize CSSFX for live CSS reloading during development
-        CSSFX.start(scene);
 
         stage.setTitle("Sound Player");
         stage.setMinWidth(400);
