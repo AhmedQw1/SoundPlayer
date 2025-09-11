@@ -2,12 +2,10 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AhmedQw1/SoundPlayer)
 ![GitHub top language](https://img.shields.io/github/languages/top/AhmedQw1/SoundPlayer)
-![License](https://img.shields.io/github/license/AhmedQw1/SoundPlayer)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AhmedQw1/SoundPlayer)
 
 ## Overview
 
-A **modern multimedia player** built with JavaFX 21 that supports both audio and video playback! 🎬🎵 This professional-grade application combines elegant Material Design with powerful media features, offering a complete solution for managing and enjoying your media collection with an intuitive, theme-adaptive interface.
+A **modern multimedia player** built with JavaFX 21 that supports both audio and video playback! 🎬🎵 This professional-grade application combines elegant Material Design with powerful media functionality to deliver an exceptional user experience.
 
 ![SoundPlayer Screenshot](screenshots/main-screen.png)
 
@@ -62,46 +60,6 @@ A **modern multimedia player** built with JavaFX 21 that supports both audio and
 ![Light Theme](screenshots/light-theme.png)
 *Clean light theme with modern Material Design elements*
 
-
-## 📦 Installation
-
-### Download Installer
-
-Download the latest installer from the [Releases page](https://github.com/AhmedQw1/SoundPlayer/releases).
-
-### Installation Steps
-
-1. Run the downloaded `.exe` installer
-2. Follow the installation prompts
-3. Launch SoundPlayer from the desktop shortcut or Start menu
-
-### System Requirements
-
-- **OS**: Windows 10 or higher
-- **RAM**: 4GB recommended (2GB minimum)
-- **Storage**: 100MB free disk space
-- **Runtime**: Java Runtime Environment (bundled with installer)
-- **Additional**: Hardware acceleration recommended for video playback
-
-## 🚀 Usage
-
-### Quick Start Guide
-
-1. **Launch** SoundPlayer from your desktop or Start menu
-2. **Add Media**: Click "Open Media" to add audio or video files
-3. **Control Playback**: Use the enhanced controls at the bottom
-4. **Switch Themes**: Click the theme toggle button (🌙/☀) in the top-right
-5. **Adjust Speed**: Use the speed dropdown for variable playback rates
-6. **Navigate**: Use Previous/Next buttons or click items in the playlist
-
-### Advanced Features
-
-- **Theme Switching**: Toggle between dark and light themes instantly
-- **Speed Control**: Adjust playback speed from 0.5x to 2x
-- **Custom Tooltips**: Hover over sliders for precise value information
-- **Playlist Management**: Right-click functionality for advanced operations
-- **File Management**: Persistent playlist that remembers your media
-
 ## 🛠️ Building From Source
 
 ### Prerequisites
@@ -109,7 +67,6 @@ Download the latest installer from the [Releases page](https://github.com/AhmedQ
 - **Java JDK 21** or higher
 - **JavaFX 21** (included in dependencies)
 - **Maven 3.8+** for building
-- **WiX Toolset v3.14+** (for building Windows installer)
 
 ### Modern Dependencies
 
@@ -130,11 +87,8 @@ cd SoundPlayer
 # Build the project
 mvn clean package
 
-# Run during development
+# Run the application
 mvn javafx:run
-
-# Create installer (Windows)
-./build_installer.bat
 ```
 
 ### Development Features
@@ -142,6 +96,26 @@ mvn javafx:run
 - **Live CSS Reload**: CSSFX enables real-time CSS updates
 - **Module Support**: Full JPMS compliance
 - **Modern Architecture**: Clean MVC-like controller separation
+
+## 🚀 Usage
+
+### Quick Start Guide
+
+1. **Clone and Build** the project using the instructions above
+2. **Run** the application with `mvn javafx:run`
+3. **Add Media**: Click "Open Media" to add audio or video files
+4. **Control Playback**: Use the enhanced controls at the bottom
+5. **Switch Themes**: Click the theme toggle button (🌙/☀) in the top-right
+6. **Adjust Speed**: Use the speed dropdown for variable playback rates
+7. **Navigate**: Use Previous/Next buttons or click items in the playlist
+
+### Advanced Features
+
+- **Theme Switching**: Toggle between dark and light themes instantly
+- **Speed Control**: Adjust playback speed from 0.5x to 2x
+- **Custom Tooltips**: Hover over sliders for precise value information
+- **Playlist Management**: Right-click functionality for advanced operations
+- **File Management**: Persistent playlist that remembers your media
 
 ## 🏗️ Project Structure
 
@@ -234,6 +208,7 @@ css/
 
 ## 🎯 Roadmap
 
+- [ ] **Windows Installer**: Create a packaged installer for easy distribution
 - [ ] **Equalizer**: Audio frequency adjustment
 - [ ] **Visualizations**: Additional audio visualization modes
 - [ ] **Playlist Export**: Save playlists to files
@@ -280,12 +255,12 @@ This project is currently **unspecified** for licensing. Please contact the main
 ## 🔗 Other Projects
 
 Check out my other work:
-- [IBM Capstone](https://github.com/AhmedQw1/java-database-capstone)
+- [IBM Final Project](https://github.com/AhmedQw1/ibm-final-project)
 - [University Chat App](https://github.com/AhmedQw1/uni-chat-app)
 - [CV Web Portfolio](https://github.com/AhmedQw1/CV-Web-Portfolio)
 
 ---
 
-**Last updated**: 2025-09-10 by AhmedQw1
+**Last updated**: 2025-09-11 by AhmedQw1
 
 *Built with ❤️ using JavaFX 21 and modern Java development practices*
