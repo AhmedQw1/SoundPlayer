@@ -6,30 +6,33 @@
 
     <groupId>com.example</groupId>
     <artifactId>SoundPlayerV2</artifactId>
-    <version>2.0.0</version>
+    <version>2.0</version>
     <name>SoundPlayerV2</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jfoenix.version>9.0.10</jfoenix.version>
         <ikonli.version>12.3.1</ikonli.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <javafx.version>21</javafx.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>21</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>21</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>21</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jfoenix</groupId>
@@ -64,6 +67,8 @@
                     <target>21</target>
                 </configuration>
             </plugin>
+
+            <!-- Copy dependencies -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -82,6 +87,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Create the main JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -98,6 +105,58 @@
                 </configuration>
             </plugin>
 
+            <!-- jpackage with icon and version 2.0 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>jpackage</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <exec executable="${java.home}/bin/jpackage" failonerror="true">
+                                    <arg value="--type"/>
+                                    <arg value="exe"/>
+                                    <arg value="--name"/>
+                                    <arg value="SoundPlayerV2"/>
+                                    <arg value="--app-version"/>
+                                    <arg value="${project.version}"/>
+                                    <arg value="--dest"/>
+                                    <arg value="${project.build.directory}/installer"/>
+
+                                    <!-- Use module mode (CRITICAL FIX) -->
+                                    <arg value="--module-path"/>
+                                    <arg value="${project.build.directory}/app/lib;${project.build.directory}/app"/>
+                                    <arg value="--module"/>
+                                    <arg value="com.example.soundplayerv1/com.example.soundplayerv1.SoundPlayerApplication"/>
+
+                                    <!-- JVM Options -->
+                                    <arg value="--java-options"/>
+                                    <arg value="--add-opens=javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix"/>
+                                    <arg value="--java-options"/>
+                                    <arg value="--add-opens=javafx.graphics/com.sun.javafx.scene=com.jfoenix"/>
+                                    <arg value="--java-options"/>
+                                    <arg value="--add-opens=javafx.base/com.sun.javafx.runtime=ALL-UNNAMED"/>
+
+                                    <!-- Windows specific -->
+                                    <arg value="--win-shortcut"/>
+                                    <arg value="--win-menu"/>
+                                    <arg value="--win-dir-chooser"/>
+
+                                    <!-- Icon -->
+                                    <arg value="--icon"/>
+                                    <arg value="C:\Users\user\IdeaProjects\SoundPlayerV2\SoundPlayerV2.ico"/>
+                                </exec>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
