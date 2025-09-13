@@ -13,7 +13,7 @@ A modern multimedia player built with JavaFX 21 that supports both audio and vid
 ## 📥 Installation
 
 - Download the installer from the Releases page:
-  - Latest V2: [SoundPlayer V2.0](https://github.com/AhmedQw1/SoundPlayer/releases/tag/v2.0)
+  - Latest V2: [SoundPlayer V2.0](https://github.com/AhmedQw1/SoundPlayer/releases/tag/v2.0.0)
   - Previous V1: [SoundPlayer V1.0](https://github.com/AhmedQw1/SoundPlayer/releases/tag/v1.0.0)
 - File to download for V2: `SoundPlayerV2-2.0.exe`
 
@@ -40,7 +40,7 @@ Note: The installer lets you pick a custom folder thanks to the installation wiz
 ### Requirements
 - Windows 10 or higher
 - 4GB RAM recommended
-- ~100MB free disk space
+- ~35MB free disk space
 - No Java required — a runtime is bundled with the installer
 
 ### Troubleshooting
