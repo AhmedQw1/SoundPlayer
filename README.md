@@ -291,9 +291,9 @@ Developer: [@AhmedQw1](https://github.com/AhmedQw1)
 Instagram: [@_klqc](https://instagram.com/_klqc)
 
 ### 🔗 Other Projects
-- IBM Final Project
-- University Chat App
-- CV Web Portfolio
+- [IBM Capstone Project](https://github.com/AhmedQw1/java-database-capstone.git)
+- [University Chat App](https://github.com/AhmedQw1/uni-chat-app.git)
+- [CV Web Portfolio](https://github.com/AhmedQw1/CV-Web-Portfolio.git)
 
 Last updated: 2025-09-11 by AhmedQw1
 
