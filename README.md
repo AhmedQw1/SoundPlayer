@@ -273,8 +273,7 @@ Development Guidelines:
 ---
 
 ## 📄 License
-This project is currently unspecified for licensing. Please contact the maintainer for usage rights.
-
+MIT Licensed 
 ---
 
 ## 🙏 Acknowledgments
