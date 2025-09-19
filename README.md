@@ -1,5 +1,11 @@
-# 🎵 Sound Player V2
+# SoundPlayer 🎵
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Java](https://img.shields.io/badge/Java-21-007396.svg?logo=java)](https://www.oracle.com/java/)
+[![JavaFX](https://img.shields.io/badge/JavaFX-21-0078D7.svg?logo=javafx)](https://openjfx.io/)
+[![Maven](https://img.shields.io/badge/Maven-Build-C71A36.svg?logo=apache-maven)](https://maven.apache.org/)
+[![Release](https://img.shields.io/badge/Latest_Release-V2.0-blue.svg)](https://github.com/AhmedQw1/SoundPlayer/releases/latest)
+[![Download](https://img.shields.io/badge/Download-EXE-brightgreen.svg)](https://github.com/AhmedQw1/SoundPlayer/releases/latest)
 [![GitHub last commit](https://img.shields.io/github/last-commit/AhmedQw1/SoundPlayer)](https://github.com/AhmedQw1/SoundPlayer/commits)
 [![GitHub top language](https://img.shields.io/github/languages/top/AhmedQw1/SoundPlayer)](https://github.com/AhmedQw1/SoundPlayer)
 
