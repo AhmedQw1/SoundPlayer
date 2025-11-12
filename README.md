@@ -248,18 +248,6 @@ css/
 
 ---
 
-## 🎯 Roadmap
-- Windows Installer: Create a packaged installer for easy distribution
-- Equalizer: Audio frequency adjustment
-- Visualizations: Additional audio visualization modes
-- Playlist Export: Save playlists to files
-- Subtitles: Video subtitle support
-- Streaming: Online media streaming capabilities
-- Plugins: Extensible plugin architecture
-- Cross-Platform: macOS and Linux support
-
----
-
 ## 🤝 Contributing
 Contributions are welcome! Here's how you can help:
 
